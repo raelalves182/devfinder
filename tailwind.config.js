@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -15,4 +16,11 @@ module.exports = {
     },
   },
   plugins: [],
+  variants: {
+    extend: {
+      backgroundColor: ['dark', 'dark-hover', 'dark-group-hover', 'dark-even', 'dark-odd'],
+      borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
+      textColor: ['dark', 'dark-hover', 'dark-active'],
+    },
+  },
 }
